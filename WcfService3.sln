@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService3", "WcfService3\WcfService3.csproj", "{D0329324-1E48-44F2-979B-945156DF5465}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelWpf", "HotelWpf\HotelWpf.csproj", "{962F55DD-DF8C-4A83-946E-A8D8B1278602}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D0329324-1E48-44F2-979B-945156DF5465} = {D0329324-1E48-44F2-979B-945156DF5465}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{D0329324-1E48-44F2-979B-945156DF5465}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0329324-1E48-44F2-979B-945156DF5465}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0329324-1E48-44F2-979B-945156DF5465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{962F55DD-DF8C-4A83-946E-A8D8B1278602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{962F55DD-DF8C-4A83-946E-A8D8B1278602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{962F55DD-DF8C-4A83-946E-A8D8B1278602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{962F55DD-DF8C-4A83-946E-A8D8B1278602}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

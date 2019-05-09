@@ -13,7 +13,12 @@ namespace WcfService3.DataBase
             : base("name=HotelDb")
         {
         }
-
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>()
+                .HasOptional(s => s.Account)
+                .WithRequired(ad => ad.User);
+        }
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Apartament> Apartaments{ get; set; }
         public virtual DbSet<Addres> Addres { get; set; }

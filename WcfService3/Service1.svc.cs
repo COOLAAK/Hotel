@@ -5,6 +5,8 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using WcfService3.BaseClass;
+using WcfService3.DataBase;
 
 namespace WcfService3
 {
@@ -12,9 +14,12 @@ namespace WcfService3
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public void bulka()
+        public Country[] bulka()
         {
-            Console.WriteLine("Bulka");
+            using (HotelDb hotel = new HotelDb())
+            {
+               return hotel.Countries.ToArray();
+            }
         }
     }
 }
