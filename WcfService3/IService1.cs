@@ -14,7 +14,8 @@ namespace WcfService3
     public interface IService1
     {
         [OperationContract]
-        Country[] bulka();
+        Country[] GetCountries();
+        
         
 
     }

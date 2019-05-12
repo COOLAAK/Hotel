@@ -7,22 +7,22 @@
       <xsd:import schemaLocation="http://localhost:54967/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService3.BaseClass" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService1_bulka_InputMessage">
-    <wsdl:part name="parameters" element="tns:bulka" />
+  <wsdl:message name="IService1_GetCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountries" />
   </wsdl:message>
-  <wsdl:message name="IService1_bulka_OutputMessage">
-    <wsdl:part name="parameters" element="tns:bulkaResponse" />
+  <wsdl:message name="IService1_GetCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
-    <wsdl:operation name="bulka">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/bulka" message="tns:IService1_bulka_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/bulkaResponse" message="tns:IService1_bulka_OutputMessage" />
+    <wsdl:operation name="GetCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCountries" message="tns:IService1_GetCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCountriesResponse" message="tns:IService1_GetCountries_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="bulka">
-      <soap:operation soapAction="http://tempuri.org/IService1/bulka" style="document" />
+    <wsdl:operation name="GetCountries">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCountries" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
