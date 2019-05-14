@@ -95,6 +95,15 @@ namespace HotelWpf
             (sender as Button).Tag = apartament;
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            using (Service1Client client = new Service1Client())
+            {
+
+            }
+                tbHotelName
+        }
     }
 }
 

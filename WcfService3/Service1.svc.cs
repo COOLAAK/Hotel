@@ -14,6 +14,14 @@ namespace WcfService3
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+        public void AddHotel(Hotel hotel)
+        {
+            using (HotelDb hotelDb = new HotelDb())
+            {
+                hotelDb.Hotels.Where(a=>a.Addres.Country==hotel.)
+            }
+        }
+
         public Country[] GetCountries()
         {
             using (HotelDb hotel = new HotelDb())
@@ -28,6 +36,11 @@ namespace WcfService3
             {
                 return hotel.TypeApartments.ToArray();
             }
+        }
+
+        public bool HotelIsReal(Hotel hotel)
+        {
+            throw new NotImplementedException();
         }
     }
 }

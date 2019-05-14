@@ -17,6 +17,10 @@ namespace WcfService3
         Country[] GetCountries();
         [OperationContract]
         TypeApartments[] GetTypeApartments();
+        [OperationContract]
+        bool HotelIsReal(Hotel hotel);
+        [OperationContract]
+        void AddHotel(Hotel hotel);
 
     }
 
