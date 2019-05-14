@@ -519,6 +519,12 @@ namespace HotelWpf.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetCountries", ReplyAction="http://tempuri.org/IService1/GetCountriesResponse")]
         System.Threading.Tasks.Task<HotelWpf.ServiceReference1.Country[]> GetCountriesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTypeApartments", ReplyAction="http://tempuri.org/IService1/GetTypeApartmentsResponse")]
+        HotelWpf.ServiceReference1.TypeApartments[] GetTypeApartments();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTypeApartments", ReplyAction="http://tempuri.org/IService1/GetTypeApartmentsResponse")]
+        System.Threading.Tasks.Task<HotelWpf.ServiceReference1.TypeApartments[]> GetTypeApartmentsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -554,6 +560,14 @@ namespace HotelWpf.ServiceReference1 {
         
         public System.Threading.Tasks.Task<HotelWpf.ServiceReference1.Country[]> GetCountriesAsync() {
             return base.Channel.GetCountriesAsync();
+        }
+        
+        public HotelWpf.ServiceReference1.TypeApartments[] GetTypeApartments() {
+            return base.Channel.GetTypeApartments();
+        }
+        
+        public System.Threading.Tasks.Task<HotelWpf.ServiceReference1.TypeApartments[]> GetTypeApartmentsAsync() {
+            return base.Channel.GetTypeApartmentsAsync();
         }
     }
 }

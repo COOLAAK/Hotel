@@ -21,5 +21,13 @@ namespace WcfService3
                return hotel.Countries.ToArray();
             }
         }
+
+        public TypeApartments[] GetTypeApartments()
+        {
+            using (HotelDb hotel = new HotelDb())
+            {
+                return hotel.TypeApartments.ToArray();
+            }
+        }
     }
 }

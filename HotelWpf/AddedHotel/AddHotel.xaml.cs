@@ -37,19 +37,64 @@ namespace HotelWpf
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            List<int> room = new List<int>();
-            int amount;
-            if(int.TryParse (tbAmount.Text,out amount))
-            {
-                for (int i = 0; i < amount; i++)
-                {
-                    room.Add(new int());
-                }
-            GenerateRoom generateRoom = new GenerateRoom(ref room);
 
-                generateRoom.ShowDialog();
+            int amount;
+            int Numb = 1;
+            if (int.TryParse(tbAmount.Text, out amount))
+            {
+                spRoom.Children.Clear();
+                for (int j = 0; j < amount / 20; j++)
+                {
+
+                    Grid AddRoom = new Grid();
+                    AddRoom.Margin = new Thickness(0, 5, 0, 0);
+                    for (int i = 0; i < 20; i++)
+                    {
+                        AddRoom.ColumnDefinitions.Add(new ColumnDefinition());
+                    }
+                    for (int i = 0; i < 20; i++)
+                    {
+                        Button txt = new Button();
+                        txt.Content = Numb.ToString();
+                        txt.Height = 30;
+                        txt.Click += new RoutedEventHandler(Button_Room);
+                        Numb++;
+                        AddRoom.Children.Add(txt);
+                        Grid.SetColumn(txt, i);
+                    }
+                    spRoom.Children.Add(AddRoom);
+                }
+                Grid LastAddRoom = new Grid();
+                LastAddRoom.Margin = new Thickness(0, 5, 0, 0);
+                for (int i = 0; i < 20; i++)
+                {
+                    LastAddRoom.ColumnDefinitions.Add(new ColumnDefinition());
+                }
+                for (int i = 0; i < amount % 20; i++)
+                {
+                    Button txt = new Button();
+                    txt.Content = Numb.ToString();
+                    txt.Height = 30;
+                    txt.Click += new RoutedEventHandler(Button_Room);
+                    Numb++;
+                    LastAddRoom.Children.Add(txt);
+                    Grid.SetColumn(txt, i);
+                }
+                spRoom.Children.Add(LastAddRoom);
+
             }
-            MessageBox.Show("Bulka");
+        }
+        private void Button_Room(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("ddd");
+            Apartament apartament = new Apartament();
+            apartament.Numb = int.Parse((sender as Button).Content.ToString());
+            GenerateRoom generateRoom = new GenerateRoom(ref apartament);
+            generateRoom.ShowDialog();
+
+            (sender as Button).Tag = apartament;
+
         }
     }
 }
+

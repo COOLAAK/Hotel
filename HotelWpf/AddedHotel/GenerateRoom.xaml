@@ -6,15 +6,28 @@
         xmlns:local="clr-namespace:HotelWpf"
         mc:Ignorable="d"
         Title="GenerateRoom" Height="450" Width="400">
-    <Grid  >
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="7*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-            <ScrollViewer>
-        <DockPanel x:Name="dpAdd" LastChildFill="False"   Background="LightSkyBlue" >                
-        </DockPanel>
-            </ScrollViewer>
-        <Button Grid.Row="1" FontSize="25" Click="Button_Click">Зберегти</Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"> Count Room</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"> Count Lie</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"> Floor </TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"> Type Apartamen</TextBlock>
+
+        <TextBox x:Name="tbRoom" Grid.Column="1" Grid.Row="0"  VerticalAlignment="Center" Margin="0,0,10,0"></TextBox>
+        <TextBox x:Name="tbLie" Grid.Column="1" Grid.Row="1"  VerticalAlignment="Center" Margin="0,0,10,0"></TextBox>
+        <TextBox x:Name="tbFloor" Grid.Column="1" Grid.Row="2"  VerticalAlignment="Center" Margin="0,0,10,0"></TextBox>
+        <ComboBox x:Name="cbTypeApart" Grid.Column="1" Grid.Row="3"  VerticalAlignment="Center" Margin="0,0,10,0"></ComboBox>
+
+        <Button Grid.ColumnSpan="2" Margin="30,10" Grid.Row="4" FontSize="15" Click="Button_Click"> Save </Button>
     </Grid>
 </Window>

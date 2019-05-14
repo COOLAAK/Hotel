@@ -15,8 +15,8 @@ namespace WcfService3
     {
         [OperationContract]
         Country[] GetCountries();
-        
-        
+        [OperationContract]
+        TypeApartments[] GetTypeApartments();
 
     }
 

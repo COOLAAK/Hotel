@@ -71,4 +71,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="TypeApartments" nillable="true" type="tns:TypeApartments" />
+  <xs:complexType name="ArrayOfTypeApartments">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TypeApartments" nillable="true" type="tns:TypeApartments" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTypeApartments" nillable="true" type="tns:ArrayOfTypeApartments" />
 </xs:schema>
