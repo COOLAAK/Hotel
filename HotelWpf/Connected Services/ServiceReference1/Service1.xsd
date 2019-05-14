@@ -25,4 +25,30 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="HotelIsReal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService3.BaseClass" minOccurs="0" name="hotel" nillable="true" type="q3:Hotel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HotelIsRealResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HotelIsRealResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddHotel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService3.BaseClass" minOccurs="0" name="hotel" nillable="true" type="q4:Hotel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddHotelResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

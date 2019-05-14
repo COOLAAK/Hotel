@@ -100,9 +100,9 @@ namespace HotelWpf
         {
             using (Service1Client client = new Service1Client())
             {
-
+                client.AddHotel(new Hotel() {Name="Travian"});
             }
-                tbHotelName
+              //  tbHotelName
         }
     }
 }

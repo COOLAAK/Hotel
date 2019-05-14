@@ -18,8 +18,10 @@ namespace WcfService3
         {
             using (HotelDb hotelDb = new HotelDb())
             {
-                hotelDb.Hotels.Where(a=>a.Addres.Country==hotel.)
+                hotelDb.Hotels.Add(hotel);
+                hotelDb.SaveChanges();
             }
+            
         }
 
         public Country[] GetCountries()
@@ -40,7 +42,12 @@ namespace WcfService3
 
         public bool HotelIsReal(Hotel hotel)
         {
-            throw new NotImplementedException();
+           
+            using (HotelDb hotelDb = new HotelDb())
+            {
+                return 1>hotelDb.Hotels.Where(a => a.Name == hotel.Name).Count();
+            }
+            
         }
     }
 }

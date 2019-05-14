@@ -42,6 +42,7 @@
       <xs:element minOccurs="0" name="Addres" nillable="true" type="tns:Addres" />
       <xs:element minOccurs="0" name="Apartaments" nillable="true" type="tns:ArrayOfApartament" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Hotel" nillable="true" type="tns:Hotel" />

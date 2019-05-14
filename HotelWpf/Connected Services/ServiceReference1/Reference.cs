@@ -233,6 +233,9 @@ namespace HotelWpf.ServiceReference1 {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -278,6 +281,19 @@ namespace HotelWpf.ServiceReference1 {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
                 }
             }
         }
@@ -525,6 +541,18 @@ namespace HotelWpf.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTypeApartments", ReplyAction="http://tempuri.org/IService1/GetTypeApartmentsResponse")]
         System.Threading.Tasks.Task<HotelWpf.ServiceReference1.TypeApartments[]> GetTypeApartmentsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/HotelIsReal", ReplyAction="http://tempuri.org/IService1/HotelIsRealResponse")]
+        bool HotelIsReal(HotelWpf.ServiceReference1.Hotel hotel);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/HotelIsReal", ReplyAction="http://tempuri.org/IService1/HotelIsRealResponse")]
+        System.Threading.Tasks.Task<bool> HotelIsRealAsync(HotelWpf.ServiceReference1.Hotel hotel);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddHotel", ReplyAction="http://tempuri.org/IService1/AddHotelResponse")]
+        void AddHotel(HotelWpf.ServiceReference1.Hotel hotel);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddHotel", ReplyAction="http://tempuri.org/IService1/AddHotelResponse")]
+        System.Threading.Tasks.Task AddHotelAsync(HotelWpf.ServiceReference1.Hotel hotel);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -568,6 +596,22 @@ namespace HotelWpf.ServiceReference1 {
         
         public System.Threading.Tasks.Task<HotelWpf.ServiceReference1.TypeApartments[]> GetTypeApartmentsAsync() {
             return base.Channel.GetTypeApartmentsAsync();
+        }
+        
+        public bool HotelIsReal(HotelWpf.ServiceReference1.Hotel hotel) {
+            return base.Channel.HotelIsReal(hotel);
+        }
+        
+        public System.Threading.Tasks.Task<bool> HotelIsRealAsync(HotelWpf.ServiceReference1.Hotel hotel) {
+            return base.Channel.HotelIsRealAsync(hotel);
+        }
+        
+        public void AddHotel(HotelWpf.ServiceReference1.Hotel hotel) {
+            base.Channel.AddHotel(hotel);
+        }
+        
+        public System.Threading.Tasks.Task AddHotelAsync(HotelWpf.ServiceReference1.Hotel hotel) {
+            return base.Channel.AddHotelAsync(hotel);
         }
     }
 }
