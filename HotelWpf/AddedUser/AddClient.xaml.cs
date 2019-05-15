@@ -40,7 +40,7 @@ namespace HotelWpf
         {
            using (Service1Client client = new Service1Client())
            {
-          var child=client.GetApartaments(dpFirst.SelectedDate.Value, dpSecond.SelectedDate.Value, cbHotel.SelectedItem.ToString()).ToList();
+          var child=client.GetApartaments(dpFirst.SelectedDate.Value, dpSecond.SelectedDate.Value, cbHotel.SelectedItem.ToString());
                 foreach (var item in child)
                 {
                     spBtn.Children.Add(new Button() { Content = item.Numb.ToString() });

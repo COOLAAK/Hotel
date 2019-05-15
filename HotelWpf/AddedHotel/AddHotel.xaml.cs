@@ -103,7 +103,7 @@ namespace HotelWpf
         {
             using (Service1Client client = new Service1Client())
             {
-                Addres addr = new Addres();
+                Address addr = new Address();
                 addr.City = cbCity.Text;
                 addr.Street = cbStreet.Text;
                 addr.Country = new Country() { Name = cbContr.Text };
@@ -111,7 +111,7 @@ namespace HotelWpf
                 {
                     client.AddHotel(new Hotel() {
                         Name = tbHotelName.Text,
-                        Addres=addr
+                        Address=addr
                     });
                 }
             }

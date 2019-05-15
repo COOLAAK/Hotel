@@ -7,7 +7,7 @@ using System.Web;
 namespace WcfService3.BaseClass
 {
     [DataContract]
-    public class Addres
+    public class Address
     {
         [DataMember]
         public int Id { get; set; }
@@ -19,7 +19,7 @@ namespace WcfService3.BaseClass
         [DataMember]
         public virtual Country Country { get; set; }
         [DataMember]
-        public virtual  IEnumerable<Hotel> Hotel { get; set; }
+        public virtual  ICollection<Hotel> Hotels { get; set; }
 
     }
 }

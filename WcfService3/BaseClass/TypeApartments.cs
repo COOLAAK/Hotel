@@ -7,15 +7,15 @@ using System.Web;
 namespace WcfService3.BaseClass
 {
     [DataContract]
-    public class TypeApartments
+    public class TypeApartment
     {
         [DataMember]
-        public int id { get; set; }
+        public int Id { get; set; }
         [DataMember]
         public string Type { get; set; }
 
         [DataMember]
-        public virtual IEnumerable<Apartament> Apartament { get; set; }
+        public virtual ICollection<Apartament> Apartaments { get; set; }
 
     }
 }

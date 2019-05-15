@@ -21,7 +21,7 @@ namespace HotelWpf
     public partial class GenerateRoom : Window
     {
         Apartament apartament;
-       List< TypeApartments> typeApartments;
+       List< TypeApartment> typeApartments;
         public GenerateRoom(ref Apartament apartament)
         {
             InitializeComponent();
@@ -41,9 +41,9 @@ namespace HotelWpf
         {
             apartament.Price = int.Parse(tbPrice.Text);
             apartament.CountRoom = int.Parse(tbRoom.Text);
-            apartament.CountLieu = int.Parse(tbLie.Text);
+            apartament.PlaceCount = int.Parse(tbLie.Text);
             apartament.Floor = int.Parse(tbFloor.Text);
-            apartament.TypeApartments = new TypeApartments() { Type = cbTypeApart.SelectedItem.ToString() };
+            apartament.TypeApartment = new TypeApartment() { Type = cbTypeApart.SelectedItem.ToString() };
             this.Close();
         }
     }

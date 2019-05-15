@@ -120,7 +120,7 @@
     <None Include="Connected Services\ServiceReference1\HotelWpf.ServiceReference1.Country.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReference1\HotelWpf.ServiceReference1.TypeApartments.datasource">
+    <None Include="Connected Services\ServiceReference1\HotelWpf.ServiceReference1.TypeApartment.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReference1\Service1.wsdl" />

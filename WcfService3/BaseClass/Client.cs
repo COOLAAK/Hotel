@@ -16,7 +16,7 @@ namespace WcfService3.BaseClass
         [DataMember]
         public DateTime LastDate { get; set; }
         [DataMember]
-        public virtual IEnumerable<Apartament> Apartament { get; set; }
+        public virtual ICollection<Apartament> Apartaments { get; set; }
         [DataMember]
         public virtual User User { get; set; }
     }

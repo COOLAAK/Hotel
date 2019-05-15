@@ -23,6 +23,6 @@ namespace WcfService3.BaseClass
         [DataMember]
         public virtual Account Account { get; set; }
         [DataMember]
-        public virtual IEnumerable<Client> Client{ get; set; }
+        public virtual ICollection<Client> Clients{ get; set; }
     }
 }

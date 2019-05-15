@@ -16,6 +16,6 @@ namespace WcfService3.BaseClass
         [DataMember]
         public string Code { get; set; }
         [DataMember]
-        public virtual IEnumerable<Addres> Addreses { get; set; }
+        public virtual ICollection<Address> Addreses { get; set; }
     }
 }

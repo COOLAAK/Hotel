@@ -73,7 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClass\Account.cs" />
-    <Compile Include="BaseClass\Addres.cs" />
+    <Compile Include="BaseClass\Address.cs" />
     <Compile Include="BaseClass\Apartament.cs" />
     <Compile Include="BaseClass\Client.cs" />
     <Compile Include="BaseClass\Country.cs" />

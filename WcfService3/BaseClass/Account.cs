@@ -15,7 +15,7 @@ namespace WcfService3.BaseClass
         [DataMember]
         public string Login { get; set; }
         [DataMember]
-        public string Passwd { get; set; }
+        public string Password { get; set; }
         [DataMember]
         public int IsDemon { get; set; }
         [DataMember]

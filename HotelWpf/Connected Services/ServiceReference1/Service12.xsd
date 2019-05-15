@@ -22,7 +22,7 @@
   <xs:element name="GetTypeApartmentsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService3.BaseClass" minOccurs="0" name="GetTypeApartmentsResult" nillable="true" type="q2:ArrayOfTypeApartments" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService3.BaseClass" minOccurs="0" name="GetTypeApartmentsResult" nillable="true" type="q2:ArrayOfTypeApartment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

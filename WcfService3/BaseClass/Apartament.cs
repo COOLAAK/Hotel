@@ -20,13 +20,13 @@ namespace WcfService3.BaseClass
         [DataMember]
         public int CountRoom { get; set; }
         [DataMember]
-        public int CountLieu { get; set; }
+        public int PlaceCount { get; set; }
         [DataMember]
-        public virtual TypeApartments TypeApartments { get; set; }
+        public virtual TypeApartment TypeApartment { get; set; }
         [DataMember]
         public virtual Hotel Hotel { get; set; }
         [DataMember]
-        public virtual IEnumerable<Client> Clients { get; set; }
+        public virtual ICollection<Client> Clients { get; set; }
 
     }
 }
