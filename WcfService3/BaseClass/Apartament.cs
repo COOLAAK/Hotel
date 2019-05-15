@@ -16,6 +16,8 @@ namespace WcfService3.BaseClass
         [DataMember]
         public int Floor { get; set; }
         [DataMember]
+        public int Price { get; set; }
+        [DataMember]
         public int CountRoom { get; set; }
         [DataMember]
         public int CountLieu { get; set; }
@@ -23,6 +25,8 @@ namespace WcfService3.BaseClass
         public virtual TypeApartments TypeApartments { get; set; }
         [DataMember]
         public virtual Hotel Hotel { get; set; }
+        [DataMember]
+        public virtual IEnumerable<Client> Clients { get; set; }
 
     }
 }

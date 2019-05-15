@@ -25,8 +25,7 @@ namespace HotelWpf
             InitializeComponent();
             using (Service1Client client = new Service1Client())
             {
-                List
-        <Country> country = client.GetCountries().ToList();
+                List<Country> country = client.GetCountries().ToList();
                 foreach (var item in country)
                 {
                     cbContr.Items.Add(item.Name);
@@ -86,7 +85,7 @@ namespace HotelWpf
         }
         private void Button_Room(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("ddd");
+            
             Apartament apartament = new Apartament();
             apartament.Numb = int.Parse((sender as Button).Content.ToString());
             GenerateRoom generateRoom = new GenerateRoom(ref apartament);
@@ -94,16 +93,32 @@ namespace HotelWpf
 
             (sender as Button).Tag = apartament;
 
+            using (Service1Client client = new Service1Client())
+            {
+                client.AddRoom(tbHotelName.Text, apartament);
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             using (Service1Client client = new Service1Client())
             {
-                client.AddHotel(new Hotel() {Name="Travian"});
+                Addres addr = new Addres();
+                addr.City = cbCity.Text;
+                addr.Street = cbStreet.Text;
+                addr.Country = new Country() { Name = cbContr.Text };
+                if (!client.HotelIsReal(new Hotel() { Name = tbHotelName.Text }))
+                {
+                    client.AddHotel(new Hotel() {
+                        Name = tbHotelName.Text,
+                        Addres=addr
+                    });
+                }
             }
               //  tbHotelName
         }
+
+        
     }
 }
 

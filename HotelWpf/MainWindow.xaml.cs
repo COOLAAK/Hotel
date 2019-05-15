@@ -28,10 +28,7 @@ namespace HotelWpf
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            using (Service1Client client = new Service1Client())
-            {
-                client.GetCountries();
-            }
+            
         }
     }
 }

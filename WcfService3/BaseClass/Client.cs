@@ -15,15 +15,9 @@ namespace WcfService3.BaseClass
         public DateTime FirstDate { get; set; }
         [DataMember]
         public DateTime LastDate { get; set; }
-
         [DataMember]
-        public int CountPeople { get; set; }
-
+        public virtual IEnumerable<Apartament> Apartament { get; set; }
         [DataMember]
-        public virtual Hotel Hotel { get; set; }
-        [DataMember]
-        public virtual Apartament Apartament { get; set; }
-        [DataMember]
-        public virtual  User User { get; set; }
+        public virtual User User { get; set; }
     }
 }

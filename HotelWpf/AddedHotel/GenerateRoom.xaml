@@ -13,6 +13,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -21,13 +22,17 @@
         <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"> Count Room</TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"> Count Lie</TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"> Floor </TextBlock>
-        <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"> Type Apartamen</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"> Price</TextBlock>
+
+        <TextBlock Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"> Type Apartamen</TextBlock>
 
         <TextBox x:Name="tbRoom" Grid.Column="1" Grid.Row="0"  VerticalAlignment="Center" Margin="0,0,10,0"></TextBox>
         <TextBox x:Name="tbLie" Grid.Column="1" Grid.Row="1"  VerticalAlignment="Center" Margin="0,0,10,0"></TextBox>
-        <TextBox x:Name="tbFloor" Grid.Column="1" Grid.Row="2"  VerticalAlignment="Center" Margin="0,0,10,0"></TextBox>
-        <ComboBox x:Name="cbTypeApart" Grid.Column="1" Grid.Row="3"  VerticalAlignment="Center" Margin="0,0,10,0"></ComboBox>
+        <TextBox x:Name="tbPrice" Grid.Column="1" Grid.Row="2"  VerticalAlignment="Center" Margin="0,0,10,0"></TextBox>
 
-        <Button Grid.ColumnSpan="2" Margin="30,10" Grid.Row="4" FontSize="15" Click="Button_Click"> Save </Button>
+        <TextBox x:Name="tbFloor" Grid.Column="1" Grid.Row="3"  VerticalAlignment="Center" Margin="0,0,10,0"></TextBox>
+        <ComboBox x:Name="cbTypeApart" Grid.Column="1" Grid.Row="4"  VerticalAlignment="Center" Margin="0,0,10,0"></ComboBox>
+
+        <Button Grid.ColumnSpan="2" Margin="30,10" Grid.Row="5" FontSize="15" Click="Button_Click"> Save </Button>
     </Grid>
 </Window>

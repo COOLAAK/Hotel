@@ -7,7 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="BUDKA" FontSize="50" Background="#FFB5B94F" Click="Button_Click"></Button>
-        
+        <Menu VerticalAlignment="Top" Background="#FFD37777" >
+        <MenuItem Header="Меню">
+            <MenuItem Header="AddClient" Click="MenuItem_Click" >
+            </MenuItem>
+            <MenuItem Header="AddHotel" Click="MenuItem_Click_1" />
+        </MenuItem>
+        </Menu>
+
     </Grid>
 </Window>

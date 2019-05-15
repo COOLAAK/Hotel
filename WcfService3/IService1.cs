@@ -21,6 +21,12 @@ namespace WcfService3
         bool HotelIsReal(Hotel hotel);
         [OperationContract]
         void AddHotel(Hotel hotel);
+        [OperationContract]
+        void AddRoom(string nameHotel, Apartament apartament);
+        [OperationContract]
+        string[] GetHotelName();
+        [OperationContract]
+        Apartament[] GetApartaments(DateTime first, DateTime Second, string name);
 
     }
 

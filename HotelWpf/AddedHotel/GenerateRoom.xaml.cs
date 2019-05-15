@@ -39,11 +39,12 @@ namespace HotelWpf
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            apartament.Price = int.Parse(tbPrice.Text);
             apartament.CountRoom = int.Parse(tbRoom.Text);
             apartament.CountLieu = int.Parse(tbLie.Text);
             apartament.Floor = int.Parse(tbFloor.Text);
-            apartament.TypeApartments = ( typeApartments.Where (a => a.Type == cbTypeApart.SelectedItem.ToString() ).First() );
+            apartament.TypeApartments = new TypeApartments() { Type = cbTypeApart.SelectedItem.ToString() };
             this.Close();
         }
     }
-}
+}   

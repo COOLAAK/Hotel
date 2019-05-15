@@ -32,9 +32,9 @@
                 <TextBlock Grid.Column="0"  VerticalAlignment = "Top" Margin="5,5,0,0"> Country:</TextBlock >
                 <ComboBox Grid.Column="1"  x:Name = "cbContr"   VerticalAlignment = "Top"  IsEditable = "True" Margin="5,4,0,0" ></ComboBox >
                 <TextBlock Grid.Column="2"  VerticalAlignment = "Top"  Margin="5,5,0,0"> City:</TextBlock >
-                <TextBox  Grid.Column="3"  VerticalAlignment = "Top" Margin="5,5,0,0"></TextBox >
+                <TextBox x:Name="cbCity" Grid.Column="3"  VerticalAlignment = "Top" Margin="5,5,0,0"></TextBox >
                 <TextBlock Grid.Column="4"   VerticalAlignment = "Top" Margin="5,5,0,0" > Street:</TextBlock >
-                <TextBox  Grid.Column="5"  VerticalAlignment = "Top" Margin="5,5,5,0" ></TextBox >
+                <TextBox  x:Name="cbStreet" Grid.Column="5"  VerticalAlignment = "Top" Margin="5,5,5,0" ></TextBox >
 
             </Grid>
             <Grid Grid.Row="1" Background="AntiqueWhite">
