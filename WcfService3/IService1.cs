@@ -27,6 +27,7 @@ namespace WcfService3
         string[] GetHotelName();
         [OperationContract]
         Apartament[] GetApartaments(DateTime first, DateTime Second, string name);
+        
 
     }
 

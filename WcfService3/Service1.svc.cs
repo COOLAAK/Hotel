@@ -44,18 +44,13 @@ namespace WcfService3
             }
         }
 
-        private bool DateComparator( DateLength order, DateLength usage   )
-        {
-            var result = true;
-            return result;
-        }
+        
 
         public Apartament[] GetApartaments(DateTime first, DateTime Second, string name)
         {
                Hotel hot;
             using (HotelDb hotelDb = new HotelDb())
             {
-                hotelDb.Configuration.ProxyCreationEnabled = false;
 
                 hot = hotelDb.Hotels.Where(a => a.Name == name).First();
                 var client = hotelDb.Clients.Where(d => d.FirstDate > first);
@@ -69,7 +64,8 @@ namespace WcfService3
                 //    }
                 //}
                 // var apart = hotelDb.Clients.Where( c => c.)
-
+                
+                hotelDb.Configuration.ProxyCreationEnabled = false;
                 return apartament.ToArray();
                 //return apart.ToArray();
                //return new 

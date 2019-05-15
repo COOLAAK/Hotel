@@ -48,10 +48,9 @@
                 <TextBlock Grid.Column="0" VerticalAlignment = "Center" Margin="10,0,0,0">Hotel name:</TextBlock >
                 <TextBox   x:Name="tbHotelName" Grid.Column="1"  VerticalAlignment = "Center" ></TextBox >
                 <DockPanel Grid.Column="2">
-                    <TextBlock VerticalAlignment="Center" Margin="10,0,0,0" > Amount of room :</TextBlock>
-                    <TextBox x:Name="tbAmount" VerticalAlignment="Center"></TextBox>
+                    
                 </DockPanel>
-                <Button Grid.Column="3"  Margin="10,5" Click="Button_Click">Generate Room</Button>
+                <Button Grid.Column="3"  Margin="10,5" Click="Button_Click_1">Crate Hotel</Button>
             </Grid>
         </Grid>
 
@@ -61,9 +60,15 @@
 
             </StackPanel>
         </ScrollViewer>
+        <DockPanel Grid.Row="2">
+            
+        <TextBlock VerticalAlignment="Center" Margin="10,0,0,0" > Amount of room :</TextBlock>
+        <TextBox x:Name="tbAmount" VerticalAlignment="Center" Width="150"></TextBox>
+            <TextBlock VerticalAlignment = "Center" Margin="10,0,0,0">Hotel name:</TextBlock >
+            <ComboBox   x:Name = "cbHotel" Width="200" VerticalAlignment="Center"    IsEditable = "True" Margin="5,4,0,0" ></ComboBox >
 
-        <Button Grid.Row="2" Click="Button_Click_1" >Save</Button>
-
+            <Button  Click="Button_Click" >Genarate Room</Button>
+        </DockPanel>
 
 
     </Grid>

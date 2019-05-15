@@ -26,12 +26,18 @@ namespace HotelWpf
             using (Service1Client client = new Service1Client())
             {
                 List<Country> country = client.GetCountries().ToList();
+                string[] Hotel = client.GetHotelName();
                 foreach (var item in country)
                 {
                     cbContr.Items.Add(item.Name);
                 }
+                foreach (var item in Hotel)
+                {
+                    cbHotel.Items.Add(item);
+                }
             }
             cbContr.SelectedIndex = 0;
+            cbHotel.SelectedIndex = 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -95,7 +101,7 @@ namespace HotelWpf
 
             using (Service1Client client = new Service1Client())
             {
-                client.AddRoom(tbHotelName.Text, apartament);
+                client.AddRoom(cbHotel.SelectedItem.ToString(), apartament);
             }
         }
 

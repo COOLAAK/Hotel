@@ -10,37 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HotelWpf.ServiceReference1;
 
-namespace HotelWpf
+namespace HotelWpf.AddedUser
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для AddUser.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddUser : Window
     {
-        public MainWindow()
+        public AddUser()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            AddHotel addHotel = new AddHotel();
-            addHotel.Show();
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            AddClient addClient = new AddClient();
-            addClient.Show();
+            User user = new User();
+            user.Name = tbName.Text;
+            user.Phone = tbPhone.Text;
+            user.Surname = tbSurName.Text;
+            user.Email = tbEmail.Text;
         }
     }
 }
