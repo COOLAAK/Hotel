@@ -21,6 +21,11 @@
             <DatePicker x:Name="dpSecond"  VerticalAlignment="Center"></DatePicker>
             <Button Click="Button_Click">Search</Button>
         </DockPanel>
-        <StackPanel x:Name="spBtn"></StackPanel>
+        
+        <ScrollViewer Grid.Row="1">
+            <StackPanel  x:Name="spBtn">
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>

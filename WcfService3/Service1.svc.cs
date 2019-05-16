@@ -7,6 +7,7 @@ using System.ServiceModel.Web;
 using System.Text;
 using WcfService3.BaseClass;
 using WcfService3.DataBase;
+using WcfService3.DTO;
 
 namespace WcfService3
 {
@@ -46,15 +47,15 @@ namespace WcfService3
 
         
 
-        public Apartament[] GetApartaments(DateTime first, DateTime Second, string name)
+        public Apartamet_DTO[] GetApartaments(DateTime first, DateTime Second, string name)
         {
                Hotel hot;
             using (HotelDb hotelDb = new HotelDb())
             {
 
+                
                 hot = hotelDb.Hotels.Where(a => a.Name == name).First();
-                var client = hotelDb.Clients.Where(d => d.FirstDate > first);
-                // var clientApartament = hotelDb.Apartaments.Any(g=>client.Select(h1=>h1.Id) == g.Clients.Select(h2=>h2.Id));
+                var client = hotelDb.Clients.Where(d => (d.FirstDate > first && d.FirstDate < Second) || (d.LastDate > first && d.LastDate < first) || (d.FirstDate < first && d.LastDate > Second));
                 var apartament =hotelDb.Apartaments.Where(a => a.Clients.Where(c => client.Where(c1 => c1.Id == c.Id).Count() == 0).Count() == 0).ToArray();
                 //for (int i = 0; i < client; i++)
                 //{
@@ -66,7 +67,19 @@ namespace WcfService3
                 // var apart = hotelDb.Clients.Where( c => c.)
                 
                 hotelDb.Configuration.ProxyCreationEnabled = false;
-                return apartament.ToArray();
+                return apartament.Select(a => new Apartamet_DTO() {
+                    Id = a.Id,
+                    RoomQuantity = a. RoomQuantity,
+                    ClientIds = a.Clients.Select(c => c.Id).ToArray(),
+                    Floor = a.Floor,
+                    Hotel = a.Hotel.Name,
+                    Numb = a.Numb,
+                    PlaceQuantity = a.PlaceQuantity,
+                    Price = a.Price,
+                    TypeApartament = a.TypeApartment.Type 
+
+                } 
+                ).ToArray();
                 //return apart.ToArray();
                //return new 
 

@@ -2,6 +2,7 @@
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:54967/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService3.BaseClass" />
   <xs:import schemaLocation="http://localhost:54967/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:54967/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WcfService3.DTO" />
   <xs:element name="GetCountries">
     <xs:complexType>
       <xs:sequence />
@@ -89,7 +90,7 @@
   <xs:element name="GetApartamentsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService3.BaseClass" minOccurs="0" name="GetApartamentsResult" nillable="true" type="q7:ArrayOfApartament" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService3.DTO" minOccurs="0" name="GetApartamentsResult" nillable="true" type="q7:ArrayOfApartamet_DTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

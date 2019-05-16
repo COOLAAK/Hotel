@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using HotelWpf.ServiceReference1;
+using HotelWpf.ServiceNS;
 
 namespace HotelWpf
 {

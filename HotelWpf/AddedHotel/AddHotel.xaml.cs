@@ -11,7 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using HotelWpf.ServiceReference1;
+using HotelWpf.ServiceNS;
+
 
 namespace HotelWpf
 {
@@ -25,9 +26,9 @@ namespace HotelWpf
             InitializeComponent();
             using (Service1Client client = new Service1Client())
             {
-                List<Country> country = client.GetCountries().ToList();
+                var countries = client.GetCountries().ToList();
                 string[] Hotel = client.GetHotelName();
-                foreach (var item in country)
+                foreach (var item in countries)
                 {
                     cbContr.Items.Add(item.Name);
                 }

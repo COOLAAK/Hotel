@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using HotelWpf.ServiceReference1;
+using HotelWpf.ServiceNS;
 
 namespace HotelWpf
 {
@@ -40,8 +40,8 @@ namespace HotelWpf
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             apartament.Price = int.Parse(tbPrice.Text);
-            apartament.CountRoom = int.Parse(tbRoom.Text);
-            apartament.PlaceCount = int.Parse(tbLie.Text);
+            apartament.RoomQuantity = int.Parse(tbRoom.Text);
+            apartament.PlaceQuantity = int.Parse(tbLie.Text);
             apartament.Floor = int.Parse(tbFloor.Text);
             apartament.TypeApartment = new TypeApartment() { Type = cbTypeApart.SelectedItem.ToString() };
             this.Close();

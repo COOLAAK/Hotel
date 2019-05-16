@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using WcfService3.BaseClass;
+using WcfService3.DTO;
 
 namespace WcfService3
 {
@@ -26,7 +27,7 @@ namespace WcfService3
         [OperationContract]
         string[] GetHotelName();
         [OperationContract]
-        Apartament[] GetApartaments(DateTime first, DateTime Second, string name);
+        Apartamet_DTO[] GetApartaments(DateTime first, DateTime Second, string name);
         
 
     }

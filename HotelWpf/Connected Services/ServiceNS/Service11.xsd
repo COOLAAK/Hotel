@@ -55,13 +55,13 @@
   <xs:complexType name="Apartament">
     <xs:sequence>
       <xs:element minOccurs="0" name="Clients" nillable="true" type="tns:ArrayOfClient" />
-      <xs:element minOccurs="0" name="CountRoom" type="xs:int" />
       <xs:element minOccurs="0" name="Floor" type="xs:int" />
       <xs:element minOccurs="0" name="Hotel" nillable="true" type="tns:Hotel" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Numb" type="xs:int" />
-      <xs:element minOccurs="0" name="PlaceCount" type="xs:int" />
+      <xs:element minOccurs="0" name="PlaceQuantity" type="xs:int" />
       <xs:element minOccurs="0" name="Price" type="xs:int" />
+      <xs:element minOccurs="0" name="RoomQuantity" type="xs:int" />
       <xs:element minOccurs="0" name="TypeApartment" nillable="true" type="tns:TypeApartment" />
     </xs:sequence>
   </xs:complexType>

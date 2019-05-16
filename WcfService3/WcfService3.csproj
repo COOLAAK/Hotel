@@ -81,6 +81,7 @@
     <Compile Include="BaseClass\TypeApartments.cs" />
     <Compile Include="BaseClass\User.cs" />
     <Compile Include="DataBase\HotelDb.cs" />
+    <Compile Include="DTO\Apartamet_DTO.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

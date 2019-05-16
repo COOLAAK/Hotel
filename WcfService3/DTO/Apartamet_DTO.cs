@@ -4,10 +4,11 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Web;
 
-namespace WcfService3.BaseClass
+namespace WcfService3.DTO
 {
     [DataContract]
-    public class Apartament
+    [KnownType(typeof(BaseClass.User))]
+    public class Apartamet_DTO
     {
         [DataMember]
         public int Id { get; set; }
@@ -22,11 +23,10 @@ namespace WcfService3.BaseClass
         [DataMember]
         public int PlaceQuantity { get; set; }
         [DataMember]
-        public virtual TypeApartment TypeApartment { get; set; }
+        public string TypeApartament { get; set; }
         [DataMember]
-        public virtual Hotel Hotel { get; set; }
+        public string  Hotel { get; set; }
         [DataMember]
-        public virtual ICollection<Client> Clients { get; set; }
-
+        public int[] ClientIds { get; set; }
     }
 }
